@@ -1,0 +1,15 @@
+# IDEs
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Node (if applicable)
+node_modules/
+pnpm-lock.yaml
+package-lock.json

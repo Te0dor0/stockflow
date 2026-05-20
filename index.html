@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StockFlow – Gestão de Estoque e Vendas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════ LOGIN ═══════════════════════════════════ -->
+<div id="login-page">
+  <div class="login-card">
+    <div class="logo-lockup">
+      <div class="logo-mark">SF</div>
+      <span class="logo-text">Stock<em>Flow</em></span>
+    </div>
+    <h2 class="login-heading">Bem-vindo de volta</h2>
+    <p class="login-sub">Faça login para acessar o sistema</p>
+    <div id="login-error" class="alert alert-danger hidden" style="margin-bottom:14px">
+      ⚠ Email ou senha incorretos. Tente novamente.
+    </div>
+    <div class="form-group">
+      <label class="form-label">Email</label>
+      <input class="form-control" type="email" id="login-email" placeholder="seu@email.com" value="admin@stockflow.com">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Senha</label>
+      <input class="form-control" type="password" id="login-senha" placeholder="••••••••" value="admin123">
+    </div>
+    <button class="btn btn-primary btn-block" onclick="doLogin()" style="margin-top:6px;padding:12px">
+      Entrar no Sistema →
+    </button>
+    <div class="login-hint">
+      <strong>Admin:</strong> admin@stockflow.com / admin123<br>
+      <strong>Funcionário:</strong> joao@stockflow.com / func123
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ APP ═══════════════════════════════════ -->
+<button id="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+<div id="app" class="hidden">
+  <!-- SIDEBAR -->
+  <div id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo-lockup" style="margin:0">
+        <div class="logo-mark" style="width:30px;height:30px;font-size:13px;border-radius:8px">SF</div>
+        <span class="logo-text" style="font-size:17px">Stock<em>Flow</em></span>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Principal</div>
+      <div class="nav-item active" data-page="dashboard" onclick="navigate('dashboard')">
+        <span class="ni">📊</span> Dashboard
+      </div>
+      <div class="nav-section-label" style="margin-top:6px">Operações</div>
+      <div class="nav-item" data-page="products" onclick="navigate('products')">
+        <span class="ni">📦</span> Produtos
+      </div>
+      <div class="nav-item" data-page="clients" onclick="navigate('clients')">
+        <span class="ni">👥</span> Clientes
+      </div>
+      <div class="nav-item" data-page="sales" onclick="navigate('sales')">
+        <span class="ni">🛒</span> PDV – Vendas
+      </div>
+      <div class="nav-item" data-page="stock" onclick="navigate('stock')">
+        <span class="ni">📋</span> Estoque
+      </div>
+      <div class="nav-section-label" id="nav-analysis-label" style="margin-top:6px">Análise</div>
+      <div class="nav-item" data-page="reports" id="nav-reports" onclick="navigate('reports')">
+        <span class="ni">📈</span> Relatórios
+      </div>
+      <div class="nav-section-label" id="nav-admin-label" style="margin-top:6px">Administração</div>
+      <div class="nav-item" data-page="users" id="nav-users" onclick="navigate('users')">
+        <span class="ni">🔑</span> Usuários
+      </div>
+      <div class="nav-item" data-page="saleshistory" id="nav-saleshistory" onclick="navigate('saleshistory')">
+        <span class="ni">🧾</span> Hist. Vendas
+      </div>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="user-card">
+        <div class="user-avatar" id="sb-avatar">AD</div>
+        <div class="user-info">
+          <div class="user-name" id="sb-name">Admin Silva</div>
+          <div class="user-role" id="sb-role">Administrador</div>
+        </div>
+      </div>
+      <button class="btn btn-secondary btn-block btn-sm" onclick="doLogout()">↩ Sair da conta</button>
+    </div>
+  </div>
+  <!-- MAIN CONTENT -->
+  <div id="main-content"></div>
+</div>
+
+<!-- MODAL -->
+<div id="modal-overlay" class="modal-overlay" onclick="overlayClick(event)">
+  <div class="modal" id="modal-box"></div>
+</div>
+
+<!-- TOAST -->
+<div id="toast-container"></div>
+
+<script src="src/js/script.js"></script>
+</body>
+</html>

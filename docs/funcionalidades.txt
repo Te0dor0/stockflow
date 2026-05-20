@@ -1,0 +1,191 @@
+O sistema é um Sistema de Gestão de Estoque e Vendas web, pensado para pequenas e médias empresas que precisam controlar produtos, clientes, estoque e vendas em um único lugar. A ideia é centralizar toda a operação comercial em uma plataforma simples, organizada e funcional.
+
+Ao acessar o sistema, o usuário encontra uma tela de login segura, onde cada pessoa entra com email e senha. Existem níveis de acesso diferentes. Um administrador possui controle total do sistema, podendo cadastrar produtos, editar informações, excluir registros, acessar relatórios financeiros e gerenciar usuários. Já funcionários possuem acesso mais limitado, focado em vendas e consultas.
+
+Depois do login, o sistema leva o usuário para um Dashboard principal, onde ele consegue visualizar rapidamente os dados mais importantes do negócio. A tela exibe informações como:
+
+- Quantidade total de produtos cadastrados
+- Número de clientes ativos
+- Total de vendas realizadas
+- Produtos com estoque baixo
+- Resumo do faturamento
+- Histórico recente de vendas
+
+Além disso, existem gráficos e métricas que ajudam na tomada de decisão, como:
+
+- Produtos mais vendidos
+- Evolução das vendas por mês
+- Produtos próximos de acabar
+- Categorias com maior volume de vendas
+
+O sistema possui um módulo completo de gerenciamento de produtos.
+
+Nele, o usuário pode:
+
+- Cadastrar novos produtos
+- Editar produtos existentes
+- Excluir produtos
+- Pesquisar produtos
+- Filtrar produtos por categoria
+- Ativar ou desativar produtos
+
+Cada produto possui informações detalhadas, incluindo:
+
+- Nome do produto
+- Descrição
+- Categoria
+- Código de barras
+- Preço de custo
+- Preço de venda
+- Quantidade em estoque
+- Status do produto
+- Data de cadastro
+
+O sistema também impede erros comuns, como:
+
+- Cadastro de produtos duplicados
+- Preços inválidos
+- Quantidades negativas
+- Produtos sem categoria
+
+Outro módulo importante é o controle de estoque.
+
+O estoque é atualizado automaticamente sempre que uma venda é realizada. Além disso, o usuário pode registrar entradas e saídas manuais de produtos.
+
+Por exemplo:
+
+Entrada de estoque:
+Quando uma empresa compra mais unidades de um produto, o funcionário registra a quantidade adicionada e informa um motivo, como:
+
+"Reposição de mercadoria"
+
+Saída manual:
+Caso um produto seja perdido, danificado ou descartado, também é possível registrar uma saída manual.
+
+Toda movimentação fica salva no histórico.
+
+O sistema registra:
+
+- Produto alterado
+- Tipo de movimentação
+- Quantidade
+- Usuário responsável
+- Motivo
+- Data e horário
+
+Isso ajuda a manter rastreabilidade e controle do estoque.
+
+O sistema também possui um gerenciamento completo de clientes.
+
+É possível:
+
+- Cadastrar clientes
+- Editar dados
+- Pesquisar clientes
+- Excluir clientes
+- Consultar histórico de compras
+
+Cada cliente possui:
+
+- Nome
+- CPF
+- Telefone
+- Email
+- Endereço
+- Histórico de compras
+
+Na área de vendas, o sistema funciona como um pequeno PDV (Ponto de Venda).
+
+O usuário pode:
+
+- Buscar produtos rapidamente
+- Adicionar itens ao carrinho
+- Definir quantidade
+- Selecionar cliente
+- Escolher forma de pagamento
+- Finalizar vendas
+
+Durante a venda, o sistema:
+
+- Calcula subtotais automaticamente
+- Calcula valor total
+- Atualiza estoque em tempo real
+- Impede vendas acima do estoque disponível
+- Registra o usuário responsável pela venda
+
+Se um produto estiver sem quantidade suficiente, o sistema bloqueia a operação e informa:
+
+"Quantidade indisponível em estoque"
+
+Após a finalização, a venda fica registrada no histórico.
+
+Cada venda armazena:
+
+- Cliente responsável
+- Funcionário que realizou
+- Produtos vendidos
+- Quantidade de itens
+- Valor total
+- Forma de pagamento
+- Status da venda
+- Data e horário
+
+Também existe um módulo de relatórios para análise do negócio.
+
+O usuário pode gerar relatórios de:
+
+- Vendas por período
+- Produtos mais vendidos
+- Produtos menos vendidos
+- Produtos com estoque baixo
+- Clientes que mais compram
+- Faturamento mensal
+- Histórico de movimentação de estoque
+
+Os relatórios podem ser filtrados por:
+
+- Data inicial e final
+- Cliente
+- Categoria
+- Produto
+- Tipo de movimentação
+
+O sistema ainda possui funcionalidades de pesquisa e filtros inteligentes.
+
+Por exemplo:
+
+Na lista de produtos:
+- Buscar por nome
+- Buscar por código de barras
+- Filtrar categoria
+
+Na lista de clientes:
+- Buscar por CPF
+- Nome
+- Telefone
+
+Na área de vendas:
+- Pesquisa instantânea de produto
+
+O sistema também possui recursos de segurança e validação, como:
+
+- Senhas criptografadas
+- Controle de permissões
+- Validação de campos
+- Proteção de rotas
+- Bloqueio de ações indevidas
+- Tratamento de erros
+
+Além disso, o sistema registra logs básicos de atividade para controle interno.
+
+Exemplos:
+
+- Produto criado
+- Produto editado
+- Estoque alterado
+- Venda realizada
+- Usuário logado
+
+Visualmente, o sistema é moderno, responsivo e organizado, pensado para uso em computadores e notebooks empresariais.
+
+O objetivo principal é facilitar a gestão de estoque e vendas, reduzir erros operacionais, organizar informações da empresa e permitir um controle mais eficiente do negócio.
